@@ -3,6 +3,7 @@ import { schema } from "./schema.ts";
 import { MongoClient } from "mongodb";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { resolvers } from "./resolvers.ts";
+import { RestauranteModel } from "./types.ts";
 
 const MONGO_URL = "mongodb+srv://ilopeza8:1234@cluster0.vbb5s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
@@ -16,7 +17,7 @@ await mongoClient.connect();
 console.info("Connected to MongoDB");
 
 const mongoDB = mongoClient.db("BaseFinal");
-const ResturantsCollection = mongoDB.collection("Restaurantes");
+const ResturantsCollection = mongoDB.collection<RestauranteModel>("Restaurantes");
 
 const server = new ApolloServer({
   typeDefs: schema,

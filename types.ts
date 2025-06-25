@@ -5,8 +5,8 @@ import { OptionalId } from "mongodb";
 export type RestauranteModel =OptionalId<{
   name: string;                                        
   address: string;
-  city: string;
   country: string;
+  city: string;
   phone: string;
   latitude: number;
   longitude: number;

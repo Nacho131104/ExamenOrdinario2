@@ -17,8 +17,7 @@ await mongoClient.connect();
 console.info("Connected to MongoDB");
 
 const mongoDB = mongoClient.db("BaseFinal");
-const ResturantsCollection =
-  mongoDB.collection("Restaurantes");
+const ResturantsCollection = mongoDB.collection("Restaurantes");
 
 const server = new ApolloServer({
   typeDefs: schema,

@@ -3,11 +3,10 @@ export const schema = `#graphql
         id: ID!
         name: String!
         address: String!
-        country: String!
-        city: String!
         phone: String!
-        latitude: Float!
-        longitude: Float!
+        datetime: String!
+        temperature: String!
+        
     }
     type Query {
         getRestaurant(id: ID!): Restaurant

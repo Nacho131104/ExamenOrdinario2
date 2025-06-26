@@ -8,8 +8,8 @@ export type RestauranteModel =OptionalId<{
   country: string;
   city: string;
   phone: string;
-  latitude: number;
-  longitude: number;
+  latitude: string;
+  longitude: string;
 }>                                                             
 
 
